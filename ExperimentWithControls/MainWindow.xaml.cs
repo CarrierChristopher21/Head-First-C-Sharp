@@ -14,22 +14,24 @@ namespace ExperimentWithControls
 			InitializeComponent();
 		}
 
-		private void numberTextBox_TextChanged(object sender, TextChangedEventArgs e)
+		private void NumberTextBox_TextChanged(object sender, TextChangedEventArgs e)
 		{
 			number.Text = numberTextBox.Text;
 		}
 
-		private void numberTextBox_PreviewTextInput(object sender, TextCompositionEventArgs e)
+		private void NumberTextBox_PreviewTextInput(object sender, TextCompositionEventArgs e)
 		{
+			#pragma warning disable IDE0059 // Unnecessary assignment of a value
 			e.Handled = !int.TryParse(e.Text, out int result);
+			#pragma warning restore IDE0059 // Unnecessary assignment of a value
 		}
 
-		private void smallSlider_ValueChanged(object sender, RoutedPropertyChangedEventArgs<double> e)
+		private void SmallSlider_ValueChanged(object sender, RoutedPropertyChangedEventArgs<double> e)
 		{
 			number.Text = smallSlider.Value.ToString("0");
 		}
 
-		private void bigSlider_ValueChanged(object sender, RoutedPropertyChangedEventArgs<double> e)
+		private void BigSlider_ValueChanged(object sender, RoutedPropertyChangedEventArgs<double> e)
 		{
 			number.Text = bigSlider.Value.ToString("000-000-0000");
 		}
@@ -42,7 +44,7 @@ namespace ExperimentWithControls
 			}
 		}
 
-		private void myListBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
+		private void MyListBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
 		{
 			if (myListBox.SelectedItem is ListBoxItem listBoxItem)
 			{
@@ -50,7 +52,7 @@ namespace ExperimentWithControls
 			}
 		}
 
-		private void readOnlyComboBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
+		private void ReadOnlyComboBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
 		{
 			if (readOnlyComboBox.SelectedItem is ListBoxItem listBoxItem)
 			{
@@ -58,7 +60,7 @@ namespace ExperimentWithControls
 			}
 		}
 
-		private void editableComboBox_TextChanged(object sender, TextChangedEventArgs e)
+		private void EditableComboBox_TextChanged(object sender, TextChangedEventArgs e)
 		{
 			if (sender is ComboBox comboBox)
 			{

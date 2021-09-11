@@ -24,7 +24,7 @@
 
 		<TextBox x:Name="numberTextBox" FontSize="18"  Margin="10,49,0,0" Text="0" Width="120"
 			HorizontalAlignment="Left" TextWrapping="Wrap"  VerticalAlignment="Top"
-			TextChanged="numberTextBox_TextChanged" PreviewTextInput="numberTextBox_PreviewTextInput"	/>
+			TextChanged="NumberTextBox_TextChanged" PreviewTextInput="NumberTextBox_PreviewTextInput"	/>
 
 		<RadioButton Content="1" Margin="10,49,0,0"
 			HorizontalAlignment="Left" Grid.Column="1" VerticalAlignment="Top" Checked="RadioButton_Checked" />
@@ -39,7 +39,7 @@
 		<RadioButton Content="6" Margin="75,69,0,0"
 			HorizontalAlignment="Left" Grid.Column="1" VerticalAlignment="Top" Checked="RadioButton_Checked" />
 
-		<ListBox x:Name="myListBox" Grid.Row="1" Margin="10,10,10,10" SelectionChanged="myListBox_SelectionChanged">
+		<ListBox x:Name="myListBox" Grid.Row="1" Margin="10,10,10,10" SelectionChanged="MyListBox_SelectionChanged">
 			<ListBoxItem Content="1" />
 			<ListBoxItem Content="2" />
 			<ListBoxItem Content="3" />
@@ -48,7 +48,7 @@
 		</ListBox>
 
 		<ComboBox x:Name="readOnlyComboBox" Grid.Column="1"  Margin="10,10,0,0" Grid.Row="1"
-			HorizontalAlignment="Left" VerticalAlignment="Top" Width="120" SelectionChanged="readOnlyComboBox_SelectionChanged">
+			HorizontalAlignment="Left" VerticalAlignment="Top" Width="120" SelectionChanged="ReadOnlyComboBox_SelectionChanged">
 			<ListBoxItem Content="1" />
 			<ListBoxItem Content="2" />
 			<ListBoxItem Content="3" />
@@ -58,8 +58,8 @@
 
 		<ComboBox x:Name="editableComboBox" Grid.Column="1" Grid.Row="1" IsEditable="True"
 			HorizontalAlignment="Left" VerticalAlignment="Top" Width="120" Margin="270,10,0,0"
-			PreviewTextInput="numberTextBox_PreviewTextInput"
-			TextBoxBase.TextChanged="editableComboBox_TextChanged">
+			PreviewTextInput="NumberTextBox_PreviewTextInput"
+			TextBoxBase.TextChanged="EditableComboBox_TextChanged">
 			<ListBoxItem Content="1" />
 			<ListBoxItem Content="2" />
 			<ListBoxItem Content="3" />
@@ -69,10 +69,10 @@
 
 		<Slider x:Name="smallSlider" Grid.Column="1" Grid.Row="2" Width="120" Margin="10,10,0,0"
 				HorizontalAlignment="Left" VerticalAlignment="Top" AutoToolTipPlacement="TopLeft"
-				Maximum="5" Minimum="1" ValueChanged="smallSlider_ValueChanged" />
+				Maximum="5" Minimum="1" ValueChanged="SmallSlider_ValueChanged" />
 
 		<Slider x:Name="bigSlider" Grid.Row="2" Grid.ColumnSpan="2" Grid.RowSpan="1" Margin="10,10,10,10"
 				HorizontalAlignment="Stretch" VerticalAlignment="Center" AutoToolTipPlacement="TopLeft"
-				Minimum="1111111111" Maximum="9999999999" Value="7183876962" ValueChanged="bigSlider_ValueChanged" />
+				Minimum="1111111111" Maximum="9999999999" Value="7183876962" ValueChanged="BigSlider_ValueChanged" />
 	</Grid>
 </Window>
